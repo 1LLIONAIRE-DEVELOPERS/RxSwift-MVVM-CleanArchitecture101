@@ -13,6 +13,7 @@
 		18DA7719282E41100092ECDA /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA7718282E41100092ECDA /* Entity.swift */; };
 		18DA771D282E4D110092ECDA /* RepositoryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA771C282E4D110092ECDA /* RepositoryParams.swift */; };
 		18DA771F282E515B0092ECDA /* RepositoryListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA771E282E515B0092ECDA /* RepositoryListRequest.swift */; };
+		18DA7721282E55D00092ECDA /* URLSessionService + Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA7720282E55D00092ECDA /* URLSessionService + Rx.swift */; };
 		33D96ABB282E2B2B009C549C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96ABA282E2B2B009C549C /* AppDelegate.swift */; };
 		33D96ABD282E2B2B009C549C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96ABC282E2B2B009C549C /* SceneDelegate.swift */; };
 		33D96ABF282E2B2B009C549C /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96ABE282E2B2B009C549C /* RepoListViewController.swift */; };
@@ -43,6 +44,7 @@
 		18DA7718282E41100092ECDA /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		18DA771C282E4D110092ECDA /* RepositoryParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryParams.swift; sourceTree = "<group>"; };
 		18DA771E282E515B0092ECDA /* RepositoryListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListRequest.swift; sourceTree = "<group>"; };
+		18DA7720282E55D00092ECDA /* URLSessionService + Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionService + Rx.swift"; sourceTree = "<group>"; };
 		33D96AB7282E2B2B009C549C /* RxSwift-MVVM-CleanArchitecture101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-MVVM-CleanArchitecture101.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D96ABA282E2B2B009C549C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33D96ABC282E2B2B009C549C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				18DA771B282E4CF50092ECDA /* RepositoryList */,
 				18DA771A282E4CA60092ECDA /* Interface */,
 				18DA7714282E3A7C0092ECDA /* URLSessionService.swift */,
+				18DA7720282E55D00092ECDA /* URLSessionService + Rx.swift */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DA7721282E55D00092ECDA /* URLSessionService + Rx.swift in Sources */,
 				33D96ABF282E2B2B009C549C /* ViewController.swift in Sources */,
 				18DA7715282E3A7C0092ECDA /* URLSessionService.swift in Sources */,
 				18DA7719282E41100092ECDA /* Entity.swift in Sources */,
