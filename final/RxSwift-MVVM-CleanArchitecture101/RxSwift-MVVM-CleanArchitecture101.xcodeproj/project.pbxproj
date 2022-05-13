@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18DA7713282E3A250092ECDA /* APIEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA7712282E3A250092ECDA /* APIEndPoints.swift */; };
+		18DA7715282E3A7C0092ECDA /* URLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA7714282E3A7C0092ECDA /* URLSessionService.swift */; };
+		18DA7717282E3B400092ECDA /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA7716282E3B400092ECDA /* APIRequest.swift */; };
+		18DA7719282E41100092ECDA /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA7718282E41100092ECDA /* Entity.swift */; };
 		33D96ABB282E2B2B009C549C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96ABA282E2B2B009C549C /* AppDelegate.swift */; };
 		33D96ABD282E2B2B009C549C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96ABC282E2B2B009C549C /* SceneDelegate.swift */; };
 		33D96ABF282E2B2B009C549C /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96ABE282E2B2B009C549C /* RepoListViewController.swift */; };
@@ -31,6 +35,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18DA7712282E3A250092ECDA /* APIEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
+		18DA7714282E3A7C0092ECDA /* URLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionService.swift; sourceTree = "<group>"; };
+		18DA7716282E3B400092ECDA /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		18DA7718282E41100092ECDA /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		33D96AB7282E2B2B009C549C /* RxSwift-MVVM-CleanArchitecture101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-MVVM-CleanArchitecture101.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D96ABA282E2B2B009C549C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33D96ABC282E2B2B009C549C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +75,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18DA7710282E39590092ECDA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				18DA7718282E41100092ECDA /* Entity.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		18DA7711282E39760092ECDA /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				18DA7712282E3A250092ECDA /* APIEndPoints.swift */,
+				18DA7714282E3A7C0092ECDA /* URLSessionService.swift */,
+				18DA7716282E3B400092ECDA /* APIRequest.swift */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
 		33D96AAE282E2B2B009C549C = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +112,8 @@
 		33D96AB9282E2B2B009C549C /* RxSwift-MVVM-CleanArchitecture101 */ = {
 			isa = PBXGroup;
 			children = (
+				18DA7711282E39760092ECDA /* NetWork */,
+				18DA7710282E39590092ECDA /* Data */,
 				33D96ABA282E2B2B009C549C /* AppDelegate.swift */,
 				33D96ABC282E2B2B009C549C /* SceneDelegate.swift */,
 				33D96AC0282E2B2B009C549C /* Main.storyboard */,
@@ -253,21 +281,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33D96AD8282E3A88009C549C /* RepoListViewModel.swift in Sources */,
-				33D96ABF282E2B2B009C549C /* RepoListViewController.swift in Sources */,
-				33F3F357282E4F2E009AE8F2 /* RepoItemQuerySortType.swift in Sources */,
-				33D96AE8282E476C009C549C /* FavoriteRepoListViewController.swift in Sources */,
-				33F3F354282E4F2E009AE8F2 /* RepoListUsecase.swift in Sources */,
-				33D96AEA282E478F009C549C /* FavoriteRepoListViewModel.swift in Sources */,
-				33D96AE2282E4010009C549C /* RepoListCoordinator.swift in Sources */,
-				33F3F356282E4F2E009AE8F2 /* RepoItem.swift in Sources */,
-				33F3F355282E4F2E009AE8F2 /* RepoItemRepository.swift in Sources */,
-				33D96ADC282E3C8F009C549C /* RepoDetailViewModel.swift in Sources */,
-				33D96AD5282E31C6009C549C /* TableViewCell.swift in Sources */,
+				33D96ABF282E2B2B009C549C /* ViewController.swift in Sources */,
+				18DA7715282E3A7C0092ECDA /* URLSessionService.swift in Sources */,
+				18DA7719282E41100092ECDA /* Entity.swift in Sources */,
 				33D96ABB282E2B2B009C549C /* AppDelegate.swift in Sources */,
 				33D96ABD282E2B2B009C549C /* SceneDelegate.swift in Sources */,
-				33D96ADA282E3C77009C549C /* RepoDetailViewController.swift in Sources */,
-				33D96AE5282E40C2009C549C /* Coordinator.swift in Sources */,
+				18DA7717282E3B400092ECDA /* APIRequest.swift in Sources */,
+				18DA7713282E3A250092ECDA /* APIEndPoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
