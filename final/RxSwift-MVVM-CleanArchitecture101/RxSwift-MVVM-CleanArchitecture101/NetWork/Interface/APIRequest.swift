@@ -12,7 +12,7 @@ protocol APIRequest {
     associatedtype ResponseType: Decodable
     
     var method: HTTPMethod { get }
-    var header: QueryParameters { get }
+    var params: QueryParameters { get }
     var urlString: String { get }
 }
 
@@ -30,7 +30,7 @@ extension APIRequest {
         
         var request = URLRequest(url: url)
         request.httpMethod = self.method.rawValue
-        self.header.queryParam.forEach { request.addValue($1 as String, forHTTPHeaderField: $0)}
+        self.params.queryParam.forEach { request.addValue($1 as String, forHTTPHeaderField: $0)}
         
         return request
     }

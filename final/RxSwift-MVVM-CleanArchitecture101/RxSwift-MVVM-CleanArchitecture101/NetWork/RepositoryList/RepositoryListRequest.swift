@@ -12,6 +12,6 @@ struct RepositoryListRequest: APIRequest {
     typealias ResponseType = Welcome
     
     var method: HTTPMethod
-    var header: QueryParameters
-    var urlString: String
+    var params: QueryParameters
+    var urlString: String = "https://api.github.com/search/repositories"
 }

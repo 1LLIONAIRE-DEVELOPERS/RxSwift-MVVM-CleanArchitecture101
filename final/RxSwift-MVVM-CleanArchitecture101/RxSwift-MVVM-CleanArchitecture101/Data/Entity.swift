@@ -45,3 +45,18 @@ struct Owner: Codable {
         case avatarURL = "avatar_url"
     }
 }
+
+extension Welcome {
+    func toDomain() -> RepoItem {
+        
+    }
+}
+//struct RepoItem {
+//    let name: String
+//    let description: String
+//    let ownerName: String
+//    let ownerAvatarURL: String
+//    let starCount: Int
+//    let language: String
+//}
+
