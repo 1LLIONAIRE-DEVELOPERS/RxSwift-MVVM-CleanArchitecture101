@@ -11,8 +11,9 @@ final class APIHeader {
     
 }
 
-final class QueryParameters {
+protocol QueryParameters {
     
+    var queryParam: [String: String] { get }
 }
 
 

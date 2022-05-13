@@ -11,9 +11,8 @@ protocol APIRequest {
     
     associatedtype ResponseType: Decodable
     
-    var base: String { get }
     var method: HTTPMethod { get }
-    var header: [String: String]? { get }
+    var header: QueryParameters { get }
     var urlString: String { get }
 }
 
@@ -31,7 +30,7 @@ extension APIRequest {
         
         var request = URLRequest(url: url)
         request.httpMethod = self.method.rawValue
-        self.header?.forEach { request.addValue($1, forHTTPHeaderField: $0)}
+        self.header.queryParam.forEach { request.addValue($1 as String, forHTTPHeaderField: $0)}
         
         return request
     }
