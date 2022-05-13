@@ -11,7 +11,7 @@ struct RepositoryParams: QueryParameters {
     
     var searchName: String
     var sortType: SortType
-    var order: String
+    var order: OrderType
     var per_page: Int
     var page: Int
     
@@ -19,7 +19,7 @@ struct RepositoryParams: QueryParameters {
         var dictionary: [String: String] = [:]
         let q = self.searchName
         let sort = self.sortType.rawValue
-        let order = self.order
+        let order = self.order.rawValue
         let per_page = self.per_page.description
         let page = self.page.description
         
@@ -38,4 +38,8 @@ enum SortType: String {
     case stars
     case forks
     case updated
+}
+
+enum OrderType: String {
+    case desc, asc 
 }
