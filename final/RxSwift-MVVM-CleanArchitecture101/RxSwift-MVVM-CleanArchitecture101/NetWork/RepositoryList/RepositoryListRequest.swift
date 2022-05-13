@@ -14,5 +14,4 @@ struct RepositoryListRequest: APIRequest {
     var method: HTTPMethod
     var header: QueryParameters
     var urlString: String
-    
 }

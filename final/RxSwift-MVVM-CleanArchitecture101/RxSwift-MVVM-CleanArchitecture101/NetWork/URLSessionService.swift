@@ -11,11 +11,11 @@ final class URLSessionService {
     
     let session = URLSession.shared
     
-    func request<T: APIRequest>(request: T,
+    func request<T: APIRequest>(requestType: T,
                                 completion: @escaping (Result<T.ResponseType, NetworkError>) -> Void
     ) -> URLSessionDataTask? {
         
-        guard let request = request.urlRequest else {
+        guard let request = requestType.urlRequest else {
             completion(.failure(.invalidRequest))
             return nil
         }
