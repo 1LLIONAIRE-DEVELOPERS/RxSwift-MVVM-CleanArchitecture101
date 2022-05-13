@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Welcome: Codable {
+struct List: Codable {
     let totalCount: Int
     let incompleteResults: Bool
     let items: [Item]
@@ -46,7 +46,7 @@ struct Owner: Codable {
     }
 }
 
-extension Welcome {
+extension List {
     func toDomain() -> RepoItem {
         
     }
