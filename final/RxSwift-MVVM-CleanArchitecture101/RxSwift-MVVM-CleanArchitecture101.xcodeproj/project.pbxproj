@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18DA7713282E3A250092ECDA /* APIEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA7712282E3A250092ECDA /* APIEndPoints.swift */; };
+		18DA7713282E3A250092ECDA /* APIEndPoints + Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA7712282E3A250092ECDA /* APIEndPoints + Protocol.swift */; };
 		18DA7715282E3A7C0092ECDA /* URLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA7714282E3A7C0092ECDA /* URLSessionService.swift */; };
 		18DA7717282E3B400092ECDA /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA7716282E3B400092ECDA /* APIRequest.swift */; };
 		18DA7719282E41100092ECDA /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA7718282E41100092ECDA /* Entity.swift */; };
+		18DA771D282E4D110092ECDA /* RepositoryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA771C282E4D110092ECDA /* RepositoryParams.swift */; };
+		18DA771F282E515B0092ECDA /* RepositoryListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA771E282E515B0092ECDA /* RepositoryListRequest.swift */; };
 		33D96ABB282E2B2B009C549C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96ABA282E2B2B009C549C /* AppDelegate.swift */; };
 		33D96ABD282E2B2B009C549C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96ABC282E2B2B009C549C /* SceneDelegate.swift */; };
 		33D96ABF282E2B2B009C549C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96ABE282E2B2B009C549C /* ViewController.swift */; };
@@ -22,10 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		18DA7712282E3A250092ECDA /* APIEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
+		18DA7712282E3A250092ECDA /* APIEndPoints + Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIEndPoints + Protocol.swift"; sourceTree = "<group>"; };
 		18DA7714282E3A7C0092ECDA /* URLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionService.swift; sourceTree = "<group>"; };
 		18DA7716282E3B400092ECDA /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		18DA7718282E41100092ECDA /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		18DA771C282E4D110092ECDA /* RepositoryParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryParams.swift; sourceTree = "<group>"; };
+		18DA771E282E515B0092ECDA /* RepositoryListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListRequest.swift; sourceTree = "<group>"; };
 		33D96AB7282E2B2B009C549C /* RxSwift-MVVM-CleanArchitecture101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-MVVM-CleanArchitecture101.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D96ABA282E2B2B009C549C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33D96ABC282E2B2B009C549C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,11 +64,29 @@
 		18DA7711282E39760092ECDA /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
-				18DA7712282E3A250092ECDA /* APIEndPoints.swift */,
+				18DA771B282E4CF50092ECDA /* RepositoryList */,
+				18DA771A282E4CA60092ECDA /* Interface */,
 				18DA7714282E3A7C0092ECDA /* URLSessionService.swift */,
-				18DA7716282E3B400092ECDA /* APIRequest.swift */,
 			);
 			path = NetWork;
+			sourceTree = "<group>";
+		};
+		18DA771A282E4CA60092ECDA /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				18DA7712282E3A250092ECDA /* APIEndPoints + Protocol.swift */,
+				18DA7716282E3B400092ECDA /* APIRequest.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		18DA771B282E4CF50092ECDA /* RepositoryList */ = {
+			isa = PBXGroup;
+			children = (
+				18DA771C282E4D110092ECDA /* RepositoryParams.swift */,
+				18DA771E282E515B0092ECDA /* RepositoryListRequest.swift */,
+			);
+			path = RepositoryList;
 			sourceTree = "<group>";
 		};
 		33D96AAE282E2B2B009C549C = {
@@ -181,9 +203,11 @@
 				18DA7715282E3A7C0092ECDA /* URLSessionService.swift in Sources */,
 				18DA7719282E41100092ECDA /* Entity.swift in Sources */,
 				33D96ABB282E2B2B009C549C /* AppDelegate.swift in Sources */,
+				18DA771F282E515B0092ECDA /* RepositoryListRequest.swift in Sources */,
 				33D96ABD282E2B2B009C549C /* SceneDelegate.swift in Sources */,
+				18DA771D282E4D110092ECDA /* RepositoryParams.swift in Sources */,
 				18DA7717282E3B400092ECDA /* APIRequest.swift in Sources */,
-				18DA7713282E3A250092ECDA /* APIEndPoints.swift in Sources */,
+				18DA7713282E3A250092ECDA /* APIEndPoints + Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
