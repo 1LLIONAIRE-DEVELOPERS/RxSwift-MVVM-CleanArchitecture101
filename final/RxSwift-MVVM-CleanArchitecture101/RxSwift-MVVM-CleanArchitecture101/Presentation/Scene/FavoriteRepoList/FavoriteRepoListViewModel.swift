@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-class RepoFavoriteViewModel {
+class FavoriteRepoListViewModel {
     struct Input {
         let viewWillAppear: Observable<Void>
         let cellDidTap: Observable<Void>
