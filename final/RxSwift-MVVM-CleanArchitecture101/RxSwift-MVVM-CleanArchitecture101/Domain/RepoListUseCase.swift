@@ -1,5 +1,5 @@
 //
-//  RepoListUsecase.swift
+//  RepoListUseCase.swift
 //  RxSwift-MVVM-CleanArchitecture101
 //
 //  Created by Jae-hoon Sim on 2022/05/13.
@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-class RepoListUsecase {
+class RepoListUseCase {
 
     let repoItemRepository: RepoItemRepository
 
@@ -31,5 +31,4 @@ class RepoListUsecase {
             pageNumber: pageNumber
         )
     }
-
 }
