@@ -12,7 +12,7 @@ struct RepositoryListRequest: APIRequest {
     typealias ResponseType = Welcome
     
     var method: HTTPMethod
-    var header: [String: String]?
+    var header: QueryParameters
     var urlString: String
     
 }
