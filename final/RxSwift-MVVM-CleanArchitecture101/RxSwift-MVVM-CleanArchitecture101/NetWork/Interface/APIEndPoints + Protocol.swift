@@ -7,10 +7,6 @@
 
 import Foundation
 
-final class APIHeader {
-    
-}
-
 protocol QueryParameters {
     
     var queryParam: [String: String] { get }
