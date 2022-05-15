@@ -24,19 +24,7 @@
 		33D96AC7282E2B31009C549C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D96AC5282E2B31009C549C /* LaunchScreen.storyboard */; };
 		33D96AD0282E2C1F009C549C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 33D96ACF282E2C1F009C549C /* RxCocoa */; };
 		33D96AD2282E2C1F009C549C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 33D96AD1282E2C1F009C549C /* RxSwift */; };
-		33D96AD5282E31C6009C549C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96AD3282E31C6009C549C /* TableViewCell.swift */; };
 		33D96AD6282E31C6009C549C /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33D96AD4282E31C6009C549C /* TableViewCell.xib */; };
-		33D96AD8282E3A88009C549C /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96AD7282E3A88009C549C /* RepoListViewModel.swift */; };
-		33D96ADA282E3C77009C549C /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96AD9282E3C77009C549C /* RepoDetailViewController.swift */; };
-		33D96ADC282E3C8F009C549C /* RepoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96ADB282E3C8F009C549C /* RepoDetailViewModel.swift */; };
-		33D96AE2282E4010009C549C /* RepoListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96AE1282E4010009C549C /* RepoListCoordinator.swift */; };
-		33D96AE5282E40C2009C549C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96AE4282E40C2009C549C /* Coordinator.swift */; };
-		33D96AE8282E476C009C549C /* FavoriteRepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96AE7282E476C009C549C /* FavoriteRepoListViewController.swift */; };
-		33D96AEA282E478F009C549C /* FavoriteRepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96AE9282E478F009C549C /* FavoriteRepoListViewModel.swift */; };
-		33F3F354282E4F2E009AE8F2 /* RepoListUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3F34F282E4F2E009AE8F2 /* RepoListUsecase.swift */; };
-		33F3F355282E4F2E009AE8F2 /* RepoItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3F350282E4F2E009AE8F2 /* RepoItemRepository.swift */; };
-		33F3F356282E4F2E009AE8F2 /* RepoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3F352282E4F2E009AE8F2 /* RepoItem.swift */; };
-		33F3F357282E4F2E009AE8F2 /* RepoItemQuerySortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3F353282E4F2E009AE8F2 /* RepoItemQuerySortType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				18DA7724282E5B820092ECDA /* Repository */,
-				18DA7718282E41100092ECDA /* List+DTO.swift */,
 				18DA7725282E5C0F0092ECDA /* Repository+DTO.swift */,
 			);
 			path = Data;
@@ -120,6 +107,7 @@
 			children = (
 				18DA771C282E4D110092ECDA /* RepositoryParams.swift */,
 				18DA771E282E515B0092ECDA /* RepositoryListRequest.swift */,
+				18DA7718282E41100092ECDA /* List+DTO.swift */,
 			);
 			path = RepositoryList;
 			sourceTree = "<group>";
@@ -322,7 +310,7 @@
 			files = (
 				18DA7723282E56D20092ECDA /* DefaultRepoItemRepository.swift in Sources */,
 				18DA7721282E55D00092ECDA /* URLSessionService+Rx.swift in Sources */,
-				33D96ABF282E2B2B009C549C /* ViewController.swift in Sources */,
+				33D96ABF282E2B2B009C549C /* RepoListViewController.swift in Sources */,
 				18DA7715282E3A7C0092ECDA /* URLSessionService.swift in Sources */,
 				18DA7719282E41100092ECDA /* List+DTO.swift in Sources */,
 				18DA7726282E5C0F0092ECDA /* Repository+DTO.swift in Sources */,

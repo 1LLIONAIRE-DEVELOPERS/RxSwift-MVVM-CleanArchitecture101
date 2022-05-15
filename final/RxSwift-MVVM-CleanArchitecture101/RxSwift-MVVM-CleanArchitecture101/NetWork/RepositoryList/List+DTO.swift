@@ -36,17 +36,25 @@ struct Item: Codable {
     }
 }
 
-extension List {
+extension Item {
     func toDomain() -> RepoItem {
+        let name = self.name
+        let description = self.itemDescription
+        let ownerName = self.owner.login
+        let starCount = self.stargazersCount
+        let language = self.language
+        let ownerURL = self.owner.avatarURL
         
+        return RepoItem(name: name, description: description, ownerName: ownerName,ownerAvatarURL:ownerURL, starCount: starCount, language: language)
     }
 }
-//struct RepoItem {
-//    let name: String
-//    let description: String
-//    let ownerName: String
-//    let ownerAvatarURL: String
-//    let starCount: Int
-//    let language: String
-//}
+
+struct RepoItem {
+    let name: String
+    let description: String
+    let ownerName: String
+    let ownerAvatarURL: String
+    let starCount: Int
+    let language: String
+}
 

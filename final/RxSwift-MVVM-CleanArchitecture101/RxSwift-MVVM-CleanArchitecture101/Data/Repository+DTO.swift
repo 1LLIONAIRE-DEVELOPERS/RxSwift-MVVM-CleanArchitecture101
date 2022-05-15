@@ -38,3 +38,42 @@ struct Owner: Codable {
         case type
     }
 }
+
+extension Repository {
+    func toDomain() -> RepoDetailItem {
+        let name = self.name
+        let htmlURL = self.htmlURL
+        let ownerName = self.owner.login
+        let ownerAvatarURL = self.owner.avatarURL
+        let ownerType = self.owner.type
+        let description = self.repositoryDescription
+        let forksCount = self.forksCount
+        let starCount = self.stargazersCount
+        let createAt = self.createdAt
+        let updatedAt = self.updatedAt
+        
+        
+        return RepoDetailItem(
+            name: name,
+            htmlURL: htmlURL,
+            ownerName: ownerName,
+            ownerAvatarURL: ownerAvatarURL,
+            ownerType: ownerType,
+            description: description,
+            forksCount: forksCount,
+            starCount: starCount,
+            createdAt: createAt,
+            updatedAt: updatedAt)
+    }
+}
+
+struct RepoDetailItem {
+    let name: String
+    let htmlURL: String
+    let ownerName: String
+    let ownerAvatarURL: String
+    let ownerType: String
+    let description: String
+    let forksCount, starCount: Int
+    let createdAt, updatedAt: Date
+}
