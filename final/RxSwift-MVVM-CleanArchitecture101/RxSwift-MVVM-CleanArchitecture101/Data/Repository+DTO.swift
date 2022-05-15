@@ -66,14 +66,3 @@ extension Repository {
             updatedAt: updatedAt)
     }
 }
-
-struct RepoDetailItem {
-    let name: String
-    let htmlURL: String
-    let ownerName: String
-    let ownerAvatarURL: String
-    let ownerType: String
-    let description: String
-    let forksCount, starCount: Int
-    let createdAt, updatedAt: Date
-}

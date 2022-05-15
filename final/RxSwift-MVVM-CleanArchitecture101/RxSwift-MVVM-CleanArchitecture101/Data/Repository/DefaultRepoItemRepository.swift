@@ -31,7 +31,8 @@ final class DefaultRepoItemRepository {
             page: pageNumber
         )
         let repoList = RepositoryListRequest(method: .GET, params: queryParam)
-        let repoItem = self.service.requestRx(request: repoList).map { $0.toDomain() }
+        let repoItem = self.service.requestRx(request: repoList)  // observable<Item>
+            .map { $0.map{ $0.toDomain() } }
         
         return repoItem
     }

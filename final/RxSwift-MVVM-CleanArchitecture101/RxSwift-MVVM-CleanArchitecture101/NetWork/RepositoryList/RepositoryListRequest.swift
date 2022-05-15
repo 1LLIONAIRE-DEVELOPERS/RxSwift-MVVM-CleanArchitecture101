@@ -9,7 +9,7 @@ import Foundation
 
 struct RepositoryListRequest: APIRequest {
     
-    typealias ResponseType = List
+    typealias ResponseType = [Item]
     
     var method: HTTPMethod
     var params: QueryParameters
