@@ -190,8 +190,8 @@
 		33D96AE0282E3F84009C549C /* RepoList */ = {
 			isa = PBXGroup;
 			children = (
-				33D96ABE282E2B2B009C549C /* RepoListViewController.swift */,
 				33D96AD7282E3A88009C549C /* RepoListViewModel.swift */,
+				33D96ABE282E2B2B009C549C /* RepoListViewController.swift */,
 				33D96AD3282E31C6009C549C /* TableViewCell.swift */,
 				33D96AD4282E31C6009C549C /* TableViewCell.xib */,
 			);

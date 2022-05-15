@@ -164,7 +164,7 @@
         <scene sceneID="njE-H9-a7b">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xnk-s1-oAr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="FVy-we-Eby"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="list.bullet" catalog="system" id="FVy-we-Eby"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9sn-PO-qm2">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -179,7 +179,7 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="109.82142857142857"/>
         </scene>
-        <!--Favorite Repo List View Controller-->
+        <!--Item-->
         <scene sceneID="gmL-Mp-S4P">
             <objects>
                 <viewController id="rYb-lD-6U6" customClass="FavoriteRepoListViewController" customModule="RxSwift_MVVM_CleanArchitecture101" customModuleProvider="target" sceneMemberID="viewController">
@@ -189,10 +189,11 @@
                         <viewLayoutGuide key="safeArea" id="NH3-HD-3sW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="HJZ-C5-RgT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WkK-Rr-3vi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1037" y="783"/>
+            <point key="canvasLocation" x="1055" y="838"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vL5-9w-3f5">
@@ -206,6 +207,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Xnk-s1-oAr" kind="relationship" relationship="viewControllers" id="fQb-32-8hJ"/>
+                        <segue destination="rYb-lD-6U6" kind="relationship" relationship="viewControllers" id="kQ9-2e-1ty"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIp-MH-p5Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -214,6 +216,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
