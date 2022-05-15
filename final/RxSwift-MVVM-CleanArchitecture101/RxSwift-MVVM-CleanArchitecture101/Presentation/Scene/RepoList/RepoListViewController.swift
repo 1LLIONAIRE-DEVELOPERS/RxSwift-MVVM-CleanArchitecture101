@@ -46,6 +46,6 @@ class RepoListViewController: UIViewController {
     }
 
     private func binding() {
-
+        //TODO: Binding 
     }
 }

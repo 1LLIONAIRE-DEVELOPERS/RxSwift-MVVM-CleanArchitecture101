@@ -24,13 +24,14 @@ extension APIRequest {
     }
     
     var urlRequest: URLRequest? {
-        guard let url = url else {
-            return nil
-        }
+       
+        var urlComponents = URLComponents(string: self.urlString)
+        let urlQueries = self.params.queryParam.map { URLQueryItem(name: $0.key, value: $0.value)}
         
-        var request = URLRequest(url: url)
+        urlComponents?.queryItems = urlQueries
+        let url = urlComponents?.url
+        var request = URLRequest(url: url!)
         request.httpMethod = self.method.rawValue
-        self.params.queryParam.forEach { request.addValue($1 as String, forHTTPHeaderField: $0)}
         
         return request
     }

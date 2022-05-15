@@ -10,9 +10,9 @@ import RxSwift
 import RxCocoa
 
 class RepoListViewModel {
-    private let repoListUseCase: RepoListUsecase
+    private let repoListUseCase: RepoListUseCase
 
-    init(useCase: RepoListUsecase) {
+    init(useCase: RepoListUseCase) {
         self.repoListUseCase = useCase
     }
 
