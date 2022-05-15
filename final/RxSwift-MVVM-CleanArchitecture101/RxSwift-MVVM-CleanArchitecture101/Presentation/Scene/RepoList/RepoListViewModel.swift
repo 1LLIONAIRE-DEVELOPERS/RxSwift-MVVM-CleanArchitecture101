@@ -7,23 +7,38 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 class RepoListViewModel {
+    private let repoListUseCase: RepoListUsecase
+
+    init(useCase: RepoListUsecase) {
+        self.repoListUseCase = useCase
+    }
+
     struct Input {
         let viewWillAppear: Observable<Void>
-        let cellDidTap: Observable<Void>
+        let searchQuery: BehaviorRelay<String>
+        let cellDidTap: Observable<RepoItem>
     }
 
     struct Output {
-        let repoItems: Observable<Void>
+        let repoItems: Observable<[RepoItem]>
     }
 
-//    func transform(input: Input) -> Output {
-//        input.viewWillAppear
-//            .flatMap {
-//
-//            }
-//
-//        return
-//    }
+    func transform(input: Input) -> Output {
+        let repoItems = input.viewWillAppear
+            .withLatestFrom(input.searchQuery)
+            .flatMapLatest {
+                self.repoListUseCase.fetch(
+                    query: $0,
+                    sortBy: nil,
+                    isDescending: true,
+                    itemsPerPage: 40,
+                    pageNumber: 1
+                )
+            }
+
+        return Output(repoItems: repoItems)
+    }
 }
