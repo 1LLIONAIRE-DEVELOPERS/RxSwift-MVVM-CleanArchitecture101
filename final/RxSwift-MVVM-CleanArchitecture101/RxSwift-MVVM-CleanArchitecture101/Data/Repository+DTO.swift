@@ -8,12 +8,12 @@
 import Foundation
 
 struct Repository: Codable {
-    let name: String
+    let name: String?
     let owner: Owner
-    let htmlURL: String
-    let repositoryDescription: String
-    let forksCount, stargazersCount: Int
-    let createdAt, updatedAt: Date
+    let htmlURL: String?
+    let repositoryDescription: String?
+    let forksCount, stargazersCount: Int?
+    let createdAt, updatedAt: Date?
 
     enum CodingKeys: String, CodingKey {
         case name
@@ -28,9 +28,9 @@ struct Repository: Codable {
 }
 
 struct Owner: Codable {
-    let login: String
-    let avatarURL: String
-    let type: String
+    let login: String?
+    let avatarURL: String?
+    let type: String?
 
     enum CodingKeys: String, CodingKey {
         case login
@@ -41,16 +41,16 @@ struct Owner: Codable {
 
 extension Repository {
     func toDomain() -> RepoDetailItem {
-        let name = self.name
-        let htmlURL = self.htmlURL
-        let ownerName = self.owner.login
-        let ownerAvatarURL = self.owner.avatarURL
-        let ownerType = self.owner.type
-        let description = self.repositoryDescription
-        let forksCount = self.forksCount
-        let starCount = self.stargazersCount
-        let createAt = self.createdAt
-        let updatedAt = self.updatedAt
+        let name = self.name ?? ""
+        let htmlURL = self.htmlURL ?? ""
+        let ownerName = self.owner.login ?? ""
+        let ownerAvatarURL = self.owner.avatarURL ?? ""
+        let ownerType = self.owner.type ?? ""
+        let description = self.repositoryDescription ?? ""
+        let forksCount = self.forksCount ?? 0
+        let starCount = self.stargazersCount ?? 0
+        let createAt = self.createdAt ?? Date()
+        let updatedAt = self.updatedAt ?? Date()
         
         
         return RepoDetailItem(

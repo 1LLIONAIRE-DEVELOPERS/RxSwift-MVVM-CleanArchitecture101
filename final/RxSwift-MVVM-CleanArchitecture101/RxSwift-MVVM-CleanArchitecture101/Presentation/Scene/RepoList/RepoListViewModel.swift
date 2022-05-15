@@ -27,8 +27,8 @@ class RepoListViewModel {
     }
 
     func transform(input: Input) -> Output {
-        let repoItems = input.viewWillAppear
-            .withLatestFrom(input.searchQuery)
+        let repoItems = input.searchQuery
+            .skip(1)
             .flatMapLatest {
                 self.repoListUseCase.fetch(
                     query: $0,
@@ -38,6 +38,7 @@ class RepoListViewModel {
                     pageNumber: 1
                 )
             }
+            .debug()
 
         return Output(repoItems: repoItems)
     }

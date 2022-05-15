@@ -10,16 +10,16 @@ import Foundation
 struct RepositoryParams: QueryParameters {
     
     var searchName: String
-    var sortType: SortType
-    var order: OrderType
+    var sortType: RepoItemQuerySortType?
+    var order: Bool
     var per_page: Int
     var page: Int
     
-    var queryParam: [String: String] {
-        var dictionary: [String: String] = [:]
+    var queryParam: [String: String?] {
+        var dictionary: [String: String?] = [:]
         let q = self.searchName
-        let sort = self.sortType.rawValue
-        let order = self.order.rawValue
+        let sort = self.sortType?.urlParam
+        let order = self.order ? "dsc" : "asc"
         let per_page = self.per_page.description
         let page = self.page.description
         

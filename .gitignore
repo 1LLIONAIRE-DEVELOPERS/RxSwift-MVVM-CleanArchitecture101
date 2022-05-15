@@ -88,3 +88,11 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+final/RxSwift-MVVM-CleanArchitecture101/.DS_Store
+
+final/.DS_Store
+
+.DS_Store
+
+final/RxSwift-MVVM-CleanArchitecture101/RxSwift-MVVM-CleanArchitecture101.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved

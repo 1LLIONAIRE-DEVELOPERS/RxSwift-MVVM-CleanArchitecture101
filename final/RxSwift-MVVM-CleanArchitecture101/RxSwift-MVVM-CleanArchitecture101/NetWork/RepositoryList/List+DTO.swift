@@ -20,10 +20,10 @@ struct List: Codable {
 }
 
 struct Item: Codable {
-    let name, fullName: String
-    let owner: Owner
-    let itemDescription: String
-    let stargazersCount: Int
+    let name, fullName: String?
+    let owner: Owner?
+    let itemDescription: String?
+    let stargazersCount: Int?
     let language: String?
 
     enum CodingKeys: String, CodingKey {
@@ -38,12 +38,12 @@ struct Item: Codable {
 
 extension Item {
     func toDomain() -> RepoItem {
-        let name = self.name
-        let description = self.itemDescription
-        let ownerName = self.owner.login
-        let starCount = self.stargazersCount
+        let name = self.name ?? ""
+        let description = self.itemDescription ?? ""
+        let ownerName = self.owner?.login ?? ""
+        let starCount = self.stargazersCount ?? 0
         let language = self.language ?? ""
-        let ownerURL = self.owner.avatarURL
+        let ownerURL = self.owner?.avatarURL ?? ""
         
         return RepoItem(
             name: name,

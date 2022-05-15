@@ -61,8 +61,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Vd-Ci-UU6">
                                         <rect key="frame" x="0.0" y="0.0" width="76.5" height="30"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TI0-xz-tat">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TI0-xz-tat">
+                                                <rect key="frame" x="0.0" y="-0.5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="SrF-6e-YVS"/>
                                                     <constraint firstAttribute="width" constant="30" id="i1W-FV-OAV"/>
@@ -79,8 +79,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VLw-9p-crd">
                                         <rect key="frame" x="91.5" y="0.0" width="76.5" height="30"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iUu-wI-GpE">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iUu-wI-GpE">
+                                                <rect key="frame" x="0.0" y="0.5" width="30" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="Kc4-zr-yMC"/>
                                                     <constraint firstAttribute="height" constant="30" id="uqQ-kR-anq"/>
@@ -110,7 +110,21 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="languageImageView" destination="iUu-wI-GpE" id="I2d-8k-637"/>
+                <outlet property="languageLabel" destination="XbZ-JQ-V6h" id="zBS-ZC-Iay"/>
+                <outlet property="ownerImage" destination="PM3-ew-ODN" id="SP2-Ug-v2b"/>
+                <outlet property="ownerNameLabel" destination="Kfp-ti-dRF" id="N9v-pe-aka"/>
+                <outlet property="repoDescriptionLabel" destination="n1Y-Lh-lhg" id="ey7-2l-MPC"/>
+                <outlet property="repoNameLabel" destination="KSa-Me-qq7" id="XWi-fr-9ly"/>
+                <outlet property="starCountLabel" destination="KM1-nq-WGn" id="18E-uW-126"/>
+                <outlet property="starImageView" destination="TI0-xz-tat" id="iig-t4-PFE"/>
+            </connections>
             <point key="canvasLocation" x="331.8840579710145" y="148.32589285714286"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+    </resources>
 </document>

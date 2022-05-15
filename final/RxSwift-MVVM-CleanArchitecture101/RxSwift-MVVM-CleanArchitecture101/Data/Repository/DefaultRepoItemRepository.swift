@@ -8,8 +8,7 @@
 import Foundation
 import RxSwift
 
-final class DefaultRepoItemRepository {
-    
+final class DefaultRepoItemRepository: RepoItemRepository {
     let service: URLSessionService
     
     init(service: URLSessionService) {
@@ -18,8 +17,8 @@ final class DefaultRepoItemRepository {
     
     func fetch(
         query: String,
-        sortBy: SortType,
-        isDescending: OrderType,
+        sortBy: RepoItemQuerySortType?,
+        isDescending: Bool,
         itemsPerPage: Int,
         pageNumber: Int
     ) -> Observable<[RepoItem]> {
@@ -32,7 +31,7 @@ final class DefaultRepoItemRepository {
         )
         let repoList = RepositoryListRequest(method: .GET, params: queryParam)
         let repoItem = self.service.requestRx(request: repoList)  // observable<Item>
-            .map { $0.map{ $0.toDomain() } }
+            .map { $0.items.map{ $0.toDomain() } }.catchAndReturn([])
         
         return repoItem
     }
