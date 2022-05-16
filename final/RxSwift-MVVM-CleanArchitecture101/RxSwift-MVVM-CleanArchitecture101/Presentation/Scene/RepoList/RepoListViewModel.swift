@@ -38,8 +38,7 @@ class RepoListViewModel {
                     pageNumber: 1
                 )
             }
-            .debug()
-
+          
         return Output(repoItems: repoItems)
     }
 }

@@ -34,6 +34,17 @@ struct Item: Codable {
         case stargazersCount = "stargazers_count"
         case language
     }
+    
+    init(from decoder: Decoder) throws {
+        let value = try decoder.container(keyedBy: CodingKeys.self)
+        
+        self.name = try value.decodeIfPresent(String.self, forKey: .name) ?? ""
+        self.fullName = try value.decodeIfPresent(String.self, forKey: .fullName) ?? ""
+        self.itemDescription = try value.decodeIfPresent(String.self, forKey: .itemDescription) ?? ""
+        self.stargazersCount = try value.decodeIfPresent(Int.self, forKey: .stargazersCount) ?? .zero
+        self.language = try value.decodeIfPresent(String.self, forKey: .language) ?? ""
+        self.owner = try value.decodeIfPresent(Owner.self, forKey: .owner) ?? Owner.init(login: "", avatarURL: "", type: "")
+    }
 }
 
 extension Item {

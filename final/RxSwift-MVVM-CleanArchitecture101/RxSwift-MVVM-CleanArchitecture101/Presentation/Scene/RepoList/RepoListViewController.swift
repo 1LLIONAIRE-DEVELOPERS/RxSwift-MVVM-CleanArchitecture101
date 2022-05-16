@@ -50,11 +50,11 @@ class RepoListViewController: UIViewController {
 
     private func binding() {
         let searchQuery = BehaviorRelay<String>(value: "")
-        self.searchController.searchBar.rx.text.orEmpty
-            .subscribe(onNext: { str in
-                if str != "" {
-                    searchQuery.accept(str)
-                }
+        
+        self.searchController.searchBar.rx.searchButtonClicked
+            .subscribe(onNext: { [weak self] _ in
+                let search = self?.searchController.searchBar.text ?? ""
+                searchQuery.accept(search)
             }).disposed(by: self.disposeBag)
         
         let input = RepoListViewModel.Input(

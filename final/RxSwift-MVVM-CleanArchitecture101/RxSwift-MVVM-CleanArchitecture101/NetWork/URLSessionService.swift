@@ -42,7 +42,7 @@ final class URLSessionService {
                     completion(.failure(.invalidData))
                     return
                 }
-                
+
                 guard let parsed = try? JSONDecoder().decode(T.ResponseType.self, from: data) else {
                     completion(.failure(.pasingError))
                     return
