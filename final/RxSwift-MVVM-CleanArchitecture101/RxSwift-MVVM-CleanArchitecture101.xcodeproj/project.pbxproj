@@ -24,6 +24,9 @@
 		18DA7721282E55D00092ECDA /* URLSessionService+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA7720282E55D00092ECDA /* URLSessionService+Rx.swift */; };
 		18DA7723282E56D20092ECDA /* DefaultRepoItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA7722282E56D20092ECDA /* DefaultRepoItemRepository.swift */; };
 		18DA7726282E5C0F0092ECDA /* Repository+DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA7725282E5C0F0092ECDA /* Repository+DTO.swift */; };
+		18DBD8DC2833A2BF00A804D1 /* RepositoryDetailParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD8DB2833A2BF00A804D1 /* RepositoryDetailParam.swift */; };
+		18DBD8DE2833A2CC00A804D1 /* RepositoryDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD8DD2833A2CC00A804D1 /* RepositoryDetailRequest.swift */; };
+		18DBD8E02833AEC000A804D1 /* DefaultRepoDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD8DF2833AEC000A804D1 /* DefaultRepoDetailRepository.swift */; };
 		33D96ABB282E2B2B009C549C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96ABA282E2B2B009C549C /* AppDelegate.swift */; };
 		33D96ABD282E2B2B009C549C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96ABC282E2B2B009C549C /* SceneDelegate.swift */; };
 		33D96ABF282E2B2B009C549C /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D96ABE282E2B2B009C549C /* RepoListViewController.swift */; };
@@ -45,6 +48,9 @@
 		18DA7720282E55D00092ECDA /* URLSessionService+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionService+Rx.swift"; sourceTree = "<group>"; };
 		18DA7722282E56D20092ECDA /* DefaultRepoItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRepoItemRepository.swift; sourceTree = "<group>"; };
 		18DA7725282E5C0F0092ECDA /* Repository+DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+DTO.swift"; sourceTree = "<group>"; };
+		18DBD8DB2833A2BF00A804D1 /* RepositoryDetailParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailParam.swift; sourceTree = "<group>"; };
+		18DBD8DD2833A2CC00A804D1 /* RepositoryDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailRequest.swift; sourceTree = "<group>"; };
+		18DBD8DF2833AEC000A804D1 /* DefaultRepoDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRepoDetailRepository.swift; sourceTree = "<group>"; };
 		33D96AB7282E2B2B009C549C /* RxSwift-MVVM-CleanArchitecture101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-MVVM-CleanArchitecture101.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D96ABA282E2B2B009C549C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33D96ABC282E2B2B009C549C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				18DA7724282E5B820092ECDA /* Repository */,
-				18DA7725282E5C0F0092ECDA /* Repository+DTO.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 		18DA7711282E39760092ECDA /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
+				18DBD8DA2833A28100A804D1 /* RepositoryDetail */,
 				18DA771B282E4CF50092ECDA /* RepositoryList */,
 				18DA771A282E4CA60092ECDA /* Interface */,
 				18DA7714282E3A7C0092ECDA /* URLSessionService.swift */,
@@ -124,8 +130,19 @@
 			isa = PBXGroup;
 			children = (
 				18DA7722282E56D20092ECDA /* DefaultRepoItemRepository.swift */,
+				18DBD8DF2833AEC000A804D1 /* DefaultRepoDetailRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		18DBD8DA2833A28100A804D1 /* RepositoryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				18DA7725282E5C0F0092ECDA /* Repository+DTO.swift */,
+				18DBD8DB2833A2BF00A804D1 /* RepositoryDetailParam.swift */,
+				18DBD8DD2833A2CC00A804D1 /* RepositoryDetailRequest.swift */,
+			);
+			path = RepositoryDetail;
 			sourceTree = "<group>";
 		};
 		33D96AAE282E2B2B009C549C = {
@@ -323,9 +340,11 @@
 				18A4F1E2283152EE00B75E4C /* TableViewCell.swift in Sources */,
 				33D96ABF282E2B2B009C549C /* RepoListViewController.swift in Sources */,
 				18A4F1DD283152D500B75E4C /* RepoListViewModel.swift in Sources */,
+				18DBD8E02833AEC000A804D1 /* DefaultRepoDetailRepository.swift in Sources */,
 				18DA7715282E3A7C0092ECDA /* URLSessionService.swift in Sources */,
 				18DA7719282E41100092ECDA /* List+DTO.swift in Sources */,
 				18A4F1DE283152DF00B75E4C /* RepoItem.swift in Sources */,
+				18DBD8DE2833A2CC00A804D1 /* RepositoryDetailRequest.swift in Sources */,
 				18DA7726282E5C0F0092ECDA /* Repository+DTO.swift in Sources */,
 				33D96ABB282E2B2B009C549C /* AppDelegate.swift in Sources */,
 				18A4F1E1283152EA00B75E4C /* Coordinator.swift in Sources */,
@@ -335,6 +354,7 @@
 				18A4F1E42831573900B75E4C /* RepoItemRepository.swift in Sources */,
 				18DA771D282E4D110092ECDA /* RepositoryParams.swift in Sources */,
 				18DA7717282E3B400092ECDA /* APIRequest.swift in Sources */,
+				18DBD8DC2833A2BF00A804D1 /* RepositoryDetailParam.swift in Sources */,
 				18DA7713282E3A250092ECDA /* APIEndPoints + Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

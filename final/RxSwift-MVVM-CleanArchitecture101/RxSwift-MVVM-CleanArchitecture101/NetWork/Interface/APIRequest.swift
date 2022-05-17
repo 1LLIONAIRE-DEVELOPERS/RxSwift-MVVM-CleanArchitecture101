@@ -14,6 +14,7 @@ protocol APIRequest {
     var method: HTTPMethod { get }
     var params: QueryParameters { get }
     var urlString: String { get }
+    var requestType: RequestType { get }
 }
 
 extension APIRequest {
@@ -23,7 +24,7 @@ extension APIRequest {
         return URL(string: self.urlString)
     }
     
-    var urlRequest: URLRequest? {
+    var urlQueryRequest: URLRequest? {
        
         var urlComponents = URLComponents(string: self.urlString)
         let urlQueries = self.params.queryParam.map { URLQueryItem(name: $0.key, value: $0.value)}
@@ -35,8 +36,23 @@ extension APIRequest {
         
         return request
     }
+    
+    var urlPathRequest: URLRequest {
+        let components = URLComponents(string: urlString)
+        self.params.queryParam.forEach { components?.path.replacingOccurrences(of: $0, with: $1 ?? "") }
+        let url = components?.url
+        var request = URLRequest(url: url!)
+        request.httpMethod = self.method.rawValue
+        
+        return request
+    }
 }
 
 enum HTTPMethod: String {
     case GET,POST,PATCH,DELETE
+}
+
+enum RequestType {
+    case query
+    case path
 }

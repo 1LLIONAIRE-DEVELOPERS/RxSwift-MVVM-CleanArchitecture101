@@ -16,9 +16,14 @@ final class URLSessionService {
         completion: @escaping (Result<T.ResponseType, NetworkError>) -> Void
     ) -> URLSessionDataTask? {
         
-        guard let request = requestType.urlRequest else {
-            completion(.failure(.invalidRequest))
-            return nil
+        if requestType.requestType == .path {
+           let request = requestType.urlPathRequest
+        } else {
+            guard let request = requestType.urlQueryRequest
+            else {
+                completion(.failure(.invalidRequest))
+                return nil
+            }
         }
         
         let task = self.session

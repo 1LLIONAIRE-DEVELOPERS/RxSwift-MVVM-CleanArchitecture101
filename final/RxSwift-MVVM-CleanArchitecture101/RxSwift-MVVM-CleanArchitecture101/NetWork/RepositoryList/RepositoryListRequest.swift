@@ -14,4 +14,5 @@ struct RepositoryListRequest: APIRequest {
     var method: HTTPMethod
     var params: QueryParameters
     var urlString: String = "https://api.github.com/search/repositories"
+    var requestType: RequestType
 }

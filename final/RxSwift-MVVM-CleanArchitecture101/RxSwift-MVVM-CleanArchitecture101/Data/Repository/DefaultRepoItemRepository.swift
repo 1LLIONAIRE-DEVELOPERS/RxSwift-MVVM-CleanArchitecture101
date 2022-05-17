@@ -29,7 +29,7 @@ final class DefaultRepoItemRepository: RepoItemRepository {
             per_page: itemsPerPage,
             page: pageNumber
         )
-        let repoList = RepositoryListRequest(method: .GET, params: queryParam)
+        let repoList = RepositoryListRequest(method: .GET, params: queryParam, requestType: .query)
         let repoItem = self.service.requestRx(request: repoList)  // observable<Item>
             .map { $0.items.map{ $0.toDomain() } }.catchAndReturn([])
         
